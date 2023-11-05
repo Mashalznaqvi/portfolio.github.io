@@ -11134,20 +11134,22 @@ p {
 
 .service-card {
   position: relative;
-  min-height: 230px;
+  min-height: 280px;
+  min-width: 280px;
   border: 1px solid #dee2e6;
   overflow: hidden;
   border-radius: 3px;
 }
 
 .service-card .body {
-  padding: 10px;
+  padding: 15px;
 }
 
 .service-card .body img.icon {
-  margin-top: 40px;
-  width: 55px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
 }
@@ -11161,6 +11163,7 @@ p {
 
 .service-card .body .subtitle {
   position: absolute;
+  padding-top: 10px;
   bottom: -100%;
   opacity: 0;
   visibility: hidden;
@@ -11176,13 +11179,15 @@ p {
 }
 
 .service-card:hover .body img.icon {
-  margin-top: 5px;
+  /* margin-top: 5px;
   width: 45px;
-  margin-bottom: 15px;
+  margin-bottom: 15px; */
+  visibility: hidden;
 }
 
 .service-card:hover .body .subtitle {
-  bottom: 7px;
+  margin-top: 5px;
+  bottom: 100px;
   opacity: 1;
   visibility: visible;
 }
@@ -12183,9 +12188,9 @@ pre .code {
 .banner-image{
  
   min-width: 700px;
-  max-width: 700px;
+  max-width: 800px;
   min-height: 350px;
-  max-height: 350px;
+  max-height: 450px;
   display: block;
   margin: auto;
 }
@@ -12321,14 +12326,24 @@ pre .code {
   grid-row-start: 6;
   grid-row-end: 9;
 }
-
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.my-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
 .button1
 {display: inline-block;
 outline: 0;
 border: 0;
 background-image: linear-gradient(to right,#697AB4,#4DB9B9);
 cursor: pointer;
-border-radius: 50px;
+border-radius: 10px;
 color: #fff;
 font-weight: 500;
 text-align: center;
@@ -12342,4 +12357,45 @@ font-size: 14px;
 .button1:hover {
     background-image: linear-gradient(to right,#D2A4C3,#899CFF);
 }
-
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+}
+10% {
+  transform: rotate(-10deg);
+}
+20% {
+  transform: rotate(12deg);
+}
+30% {
+  transform: rotate(-10deg);
+}
+40% {
+  transform: rotate(9deg);
+}
+50% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(0deg);
+}
+}
+.w3-display-container
+{position:relative}
+.w3-content
+{
+  max-width:980px}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-display-left{position:absolute;top:50%;left:5%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:5%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3-large{font-size:18px!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
